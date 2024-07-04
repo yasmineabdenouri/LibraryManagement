@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hero Page</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ff7e5f, #feb47b);
+      color: white;
+      padding: 0 5%;
+    }
+
+    .hero-content {
+      max-width: 50%;
+    }
+
+    .hero-content h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .cta-buttons a {
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      font-size: 1em;
+      transition: background 0.3s ease;
+    }
+
+    .cta-buttons .primary-btn {
+      background: white;
+      color: #ff7e5f;
+    }
+
+    .cta-buttons .primary-btn:hover {
+      background: #f1f1f1;
+    }
+
+    .cta-buttons .secondary-btn {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+    }
+
+    .cta-buttons .secondary-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .hero-image {
+      max-width: 40%;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+    <!-- {% include "library/navbar.html" %} -->
+
+  <div class="hero">
+    <div class="hero-content">
+      <h1>Découvrez Votre Prochaine Lecture</h1>
+      <p>Explorez les livres les plus fascinants avec notre application de gestion de bibliothèque.</p>
+      <div class="cta-buttons">
+        <a href="homeview" class="primary-btn">Commencer</a>
+        <a href="#" class="secondary-btn">En Savoir Plus</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="{% static "images/libraryImage.jpeg" %}" alt="Travel Image">
+    </div>
+  </div>
+</body>
+</html>
+    
